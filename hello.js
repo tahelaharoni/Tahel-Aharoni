@@ -25,5 +25,38 @@ const calc=(operand1,operand2,operator)=>{
 }
 
 const compact=(array)=>{
-    
+    let newArr=[];
+    array.forEach(element => {
+        if(element!=false&&element!=null&&element!=0&&
+            element!=""&&element!=undefined&&element!=NaN){
+                newArr.push(element);
+            }
+    });
+    return newArr;
+}
+
+const intersection=(array1,array2,isStrict)=>{
+    let newArr=[];
+    if(isStrict==true){
+        for(let i=0;i<array1.length;i++){
+            for(let n=0;n<array2.length;n++){
+                if(array1[i]===array2[n]){
+                    newArr.push(array2[i]);
+                }
+            }
+        }
+        return newArr;
+
+    }
+    if(isStrict==false){
+        for(let i=0;i<array1.length;i++){
+            for(let n=0;n<array2.length;n++){
+                if(array1[i]==array2[n]){
+                    newArr.push(array2[i]);
+                }
+            }
+        }
+        return newArr;
+
+    }
 }
