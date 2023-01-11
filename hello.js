@@ -60,3 +60,16 @@ const intersection=(array1,array2,isStrict)=>{
 
     }
 }
+
+const size=(collection)=>{
+    let counter=0;
+    collection.forEach(element => {
+        counter++;
+    });
+    return counter;
+}
+
+const castArray=(value)=>{
+    let array=[];
+    return array.push(value);
+}
